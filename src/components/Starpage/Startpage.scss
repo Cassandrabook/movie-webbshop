@@ -1,0 +1,18 @@
+.main-img{
+    background-image: linear-gradient(rgba(52, 52, 52, 0.54),rgba(29, 29, 29, 0.544)), url(https://images.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-position: center;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+
+    h1{
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        font-size: 120px;
+        text-transform:uppercase;
+        color: white;
+        text-shadow: 0 0 20px;
+    }
+}
