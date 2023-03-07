@@ -1,0 +1,55 @@
+@use './breakpoints' as b;
+@use './fonts' as f;
+@use './colors' as c;
+@use './variables' as v;
+
+@mixin text-slider {
+    .slide-right{
+        animation: slideRight 1.3s linear forwards;
+    }
+
+    @keyframes slideRight{
+        0%{
+            transform: translate(-600px);
+            opacity: 0;
+        }
+        50%{
+            opacity: 0.5;
+        }
+        100%{
+            transform: translate(0px);
+            opacity: 1;
+        }
+    }
+}
+
+@mixin about-picture {
+    background-image: v.$profile-pic;
+    background-position:top;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+
+    @include b.medium{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@mixin list-bullets {
+    ul li::before{
+        content: "\2022";
+        color: c.$my-pop-color;
+        font-weight: 900;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em
+    }
+}
+
+@mixin bg-img-position {
+    background-position: center;
+    background-size: cover;
+}

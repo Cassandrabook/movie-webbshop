@@ -21,6 +21,7 @@ export const Products = () => {
         if(products.length > 0) return;
 
         getData();
+
     });
 
     let productsHtml = products.map((product) => {

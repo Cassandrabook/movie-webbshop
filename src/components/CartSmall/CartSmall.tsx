@@ -7,6 +7,11 @@ interface ICartSmallProps{
 }
 
 export const CartSmall = (props: ICartSmallProps) => {
+
+    let saveCartLs = localStorage.setItem("cart", JSON.stringify(props.cart));
+    let getFromLs = localStorage.getItem("cart");
+
+        console.log(saveCartLs);
     return(
         <>
             ({props.cart.length})

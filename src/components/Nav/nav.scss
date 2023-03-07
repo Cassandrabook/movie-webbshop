@@ -1,6 +1,6 @@
 .navbar{
     height: 70px;
-    background-color: grey;
+    background-color: #ff795b;
 
     &__ul{
         display: flex;
@@ -11,13 +11,17 @@
     &__li, &__logo{
         display: flex;
         justify-content: end;
-        gap: 30px;
+        gap: 50px;
         margin: 20px 40px;
     }
 
     &__navigation, &__logo{
         text-decoration: none;
-        color: black;
+        color: white;
         font-size: 20px;
     }
+}
+
+.nav{
+    box-shadow: 0 20px 40px 0 rgba(255, 255, 255, 0.696);
 }

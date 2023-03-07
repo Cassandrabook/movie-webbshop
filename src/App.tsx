@@ -26,7 +26,7 @@ function App() {
       <main>
         <Outlet context={{ addProductToCart, cart }}></Outlet>
       </main>
-      <footer>Footer</footer>
+      
     </>
   );
 }

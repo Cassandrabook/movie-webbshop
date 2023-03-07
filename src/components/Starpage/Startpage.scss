@@ -1,18 +1,64 @@
+@use './../../styling/colors' as c;
+@use './../../styling/variables' as v;
+@use './../../styling/breakpoints' as b;
+@use './../../styling/fonts' as f;
+@use './../../styling/mixins' as m;
+
 .main-img{
     background-image: linear-gradient(rgba(52, 52, 52, 0.54),rgba(29, 29, 29, 0.544)), url(https://images.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
     background-position: center;
     background-size: cover;
-    height: 70vh;
+    height: 92vh;
     width: 100%;
     display: flex;
+}
 
-    h1{
-        display: flex;
-        margin: 0 auto;
-        align-items: center;
-        font-size: 120px;
+.startpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+    color: white;
+
+    &__title{
+        font-size: 80px;
+        text-align: center;
         text-transform:uppercase;
+        text-shadow: 0 0 20px;
+
+        @include b.medium{
+            font-size: 120px;
+        }
+
+    }
+
+    &__text{
+        font-size: 23px;
+        text-shadow: 0 0 20px;
+        width: 280px;
+        text-align: center;
+
+        @include b.medium{
+            font-size: 40px;
+            width: 500px;
+        }
+    }
+
+    &__button{
+        background-color: transparent;
         color: white;
         text-shadow: 0 0 20px;
+        font-size: 25px;
+        padding: 20px;
+        border: 1px solid white;
+        cursor: pointer;
+        transition: all ease 0.5s;
+    }
+
+    &__button:hover{
+        background-color: rgba(255, 255, 255, 0.265);
+        font-size: 26px;
     }
 }

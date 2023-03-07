@@ -14,7 +14,7 @@ export const Nav = (props: INavProps) => {
         <nav className="navbar">
             
             <ul className="navbar__ul">
-                <li className="navbar__logo">Movies</li>
+                <li className="navbar__logo">Movies.se</li>
                 <li className="navbar__li">
                     <Link to="/" className="navbar__navigation">Home</Link>
                     <Link to="/products" className="navbar__navigation">Movies</Link>

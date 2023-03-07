@@ -4,6 +4,9 @@ import { MyContext } from "../../App";
 import { IProduct } from "../../models/IProduct";
 import { IProductSmall } from "../../models/IProductSmall";
 import { getProductById } from "../../services/ProductService";
+import './productDetail.scss';
+
+
 
 export const ProductDetails = () => {
     const [product, setProduct] = useState<IProduct>();
@@ -41,11 +44,20 @@ export const ProductDetails = () => {
                     <h2>{error}</h2>
                 </>
             ): (
-                <>
-                    <h3>{product?.name}</h3>
-                    <p>{product?.description}</p>
-                    <img src={product?.imageUrl} alt={product?.name} />
-                    <button onClick={addToCart}>Lägg i varukorgen</button>
+                <>  
+                    <section className="movieProduct">
+                        <div className="movieProduct__container">
+                            <img className="movieProduct__container__img" src={product?.imageUrl} alt={product?.name} />
+                            <div className="movieProduct__container__content">
+                                <h2 className="movieProduct__container__content__name slide-in">{product?.name}</h2>
+                                <p className="movieProduct__container__content__year slide-in">Utgivningsår: {product?.year}</p>
+                                <p className="movieProduct__container__content__desc slide-in">{product?.description}</p>
+                                <p className="movieProduct__container__content__price slide-in">Pris: {product?.price} kr</p>
+                                <button className="movieProduct__container__content__button slide-in" onClick={addToCart}>Lägg i varukorgen</button>
+                            </div>
+                        </div>
+                    </section>
+                    
                 </>
             )}
         </>

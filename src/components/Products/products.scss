@@ -1,15 +1,13 @@
 .products-contaier{
     margin: 0 auto;
-    width: 90%;
-    background-image: url(https://images.pexels.com/photos/220067/pexels-photo-220067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    padding: 4rem;
+    background-image: url(./../../assets/movie-bg.png);
 }
 
 .products{
     
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: start;
-    margin: 0 auto;
-    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    
 }

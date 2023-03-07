@@ -1,6 +1,7 @@
 import exp from "constants";
 import { useNavigate } from "react-router-dom";
 import { IProductSmall } from "../../models/IProductSmall";
+import { CartSmall } from "../CartSmall/CartSmall";
 import './product.scss';
 
 interface IProductProps{
@@ -11,6 +12,8 @@ interface IProductProps{
 
 export const Product = (props: IProductProps) => {
     const navigate = useNavigate();
+
+    
 
     const handleClick = () => {
         props.addToCart(props.product);

@@ -1,0 +1,85 @@
+.movieProduct{
+   background-color: rgb(246, 246, 246);
+   padding: 4rem;
+   overflow-x: hidden;
+
+    &__container{
+        width: 60%;
+        display: flex;
+        margin: 0 auto;
+        padding: 4rem;
+        border-radius: 30px;
+        background-color: white;
+        gap: 50px;
+        box-shadow: 0 0 20px rgb(228, 228, 228);
+
+        &__img{
+            width: 50%;
+        }
+    
+        &__content{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+    
+            &__name{
+                font-size: 30px;
+            }
+
+            &__year, &__desc, &__price, &__button{
+                opacity: 0;
+            }
+    
+            p{
+                font-size: 18px;
+            }
+    
+            &__button{
+                padding: 10px;
+                font-size: 18px;
+                background-color: rgb(51, 208, 51);
+                color: white;
+                cursor: pointer;
+                transition: all ease 0.3s;
+                border: none;
+                border-radius: 30px;
+            }
+
+            &__button:hover{
+                background-color: rgba(51, 208, 51, 0.668);
+                color: white;
+            }
+        }
+    }
+}
+
+.slide-in{
+    animation: slindIn 1s linear forwards;
+}
+
+@keyframes slindIn{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+.movieProduct__container__content__year.slide-in{
+    animation-delay: 0.3s;
+}
+
+.movieProduct__container__content__desc.slide-in{
+    animation-delay: 0.5s;
+} 
+
+.movieProduct__container__content__price.slide-in{
+    animation-delay: 0.7s;
+}
+
+.movieProduct__container__content__button.slide-in{
+    animation-delay: 0.9s;
+}
