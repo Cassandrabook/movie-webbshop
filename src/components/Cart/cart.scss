@@ -1,0 +1,68 @@
+@use "./../../styling/colors" as c;
+@use "./../../styling/variables" as v;
+@use "./../../styling/breakpoints" as b;
+@use "./../../styling/fonts" as f;
+@use "./../../styling/mixins" as m;
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    border-collapse: collapse;
+
+    &__headline {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+
+      &__shop {
+        width: 100px;
+      }
+
+      &__name {
+        width: 270px;
+      }
+    }
+
+    &__cartItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgb(240, 240, 240);
+      padding: 10px;
+
+      &__img {
+        width: 80px;
+      }
+
+      &__movieName {
+        font-size: 20px;
+        width: 250px;
+      }
+
+      &__moviePrice {
+        font-size: 20px;
+      }
+
+      &__delete {
+        font-size: 25px;
+        transition: all ease 0.2s;
+      }
+
+      &__delete:hover {
+        color: red;
+        font-size: 29px;
+      }
+    }
+
+    &__cartItem:nth-child(even) {
+      background-color: rgb(255, 248, 243);
+    }
+  }
+}

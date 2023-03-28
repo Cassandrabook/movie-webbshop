@@ -1,27 +1,100 @@
-.navbar{
+@use "./../../styling/colors" as c;
+@use "./../../styling/breakpoints" as b;
+@use "./../../styling/fonts" as f;
+
+.container {
+  @include b.medium {
+    display: block;
     height: 70px;
     background-color: #ff795b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+  }
 
-    &__ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  &__logo {
+    display: none;
 
-    &__li, &__logo{
-        display: flex;
-        justify-content: end;
-        gap: 50px;
-        margin: 20px 40px;
+    @include b.medium {
+      display: block;
+      font-size: 20px;
+      color: white;
     }
-
-    &__navigation, &__logo{
-        text-decoration: none;
-        color: white;
-        font-size: 20px;
-    }
+  }
 }
 
-.nav{
-    box-shadow: 0 20px 40px 0 rgba(255, 255, 255, 0.696);
+.navbar {
+  position: absolute;
+  width: 95%;
+  z-index: 2;
+
+  @include b.medium-nav {
+    transform: translateX(-100%);
+    transition: ease-in 0.4s;
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+
+    @include b.medium {
+      justify-content: end;
+    }
+  }
+
+  &__li {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @include b.medium {
+      flex-direction: row;
+    }
+  }
+
+  &__navigation,
+  &__logo {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+}
+
+.nav {
+  box-shadow: 0 20px 40px 0 rgba(255, 255, 255, 0.696);
+}
+
+.navActive {
+  background-color: #ff795bd3;
+  width: 100%;
+  transform: translateX(0%);
+  transition: ease-out 0.4s;
+  position: absolute;
+  z-index: 2;
+
+  @include b.medium {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+}
+
+.hamburger-react {
+  display: block;
+  position: absolute;
+  z-index: 2;
+
+  @include b.medium {
+    display: none;
+  }
+}
+
+header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
 }
